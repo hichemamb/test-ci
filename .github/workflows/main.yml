@@ -1,0 +1,16 @@
+name: Test CI
+on: push
+
+jobs:
+  my-job:
+    name: My Job
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print my name
+      env:
+        MY_VAR: Hi there! My name is
+        FIRST_NAME: Hichem
+        MIDDLE_NAME: AMAR
+        LAST_NAME: BENSABER
+      run: |
+        echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
